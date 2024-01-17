@@ -20,13 +20,14 @@ score0Element.textContent = 0;
 score1Element.textContent = 0;
 diceElement.classList.add(`hidden`);
 
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true;
+let scores, currentScore, activePlayer, playing;
 
 
 const init = function () {
+    scores = [0, 0];
+    currentScore = 0;
+    activePlayer = 0;
+    playing = true;
     currentScore0Element.textContent = 0;
     currentScore1Element.textContent = 0;
     score0Element.textContent = 0;
@@ -37,11 +38,6 @@ const init = function () {
     player1Element.classList.remove(`player--active`);
 
     diceElement.classList.add(`hidden`);
-    // set all conditions to the inital value
-    scores = [0, 0];
-    currentScore = 0;
-    activePlayer = 0;
-    playing = true;
 };
 init();
 
